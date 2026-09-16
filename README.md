@@ -17,8 +17,9 @@ Built on [TinyUSB](https://github.com/hathach/tinyusb) (a git submodule), no Sof
 | D4        | BUSY   |
 | D6        | DIO1   |
 
-`boards/lora-xiao-sx1262-ch341-bridge.yaml` is the matching meshtasticd board file; it also works as
-RepeaterTastic's `radio.device`.
+`boards/lora-usb-xiao-sx1262-ch341.yaml` is the matching board file. RepeaterTastic has it built in
+and its `auto` detection picks it from the USB product string; for meshtasticd copy it into
+`/etc/meshtasticd/config.d/`.
 
 At boot the firmware probes the two Wio-SX1262 pinouts (the header kit, then the board-to-board
 version) by resetting the chip and reading the LoRa sync word register, and uses whichever answers.
