@@ -1,0 +1,19 @@
+Meta:
+  name: XIAO nRF52840 + Wio-SX1262 (CH341 bridge firmware)
+  support: community
+  compatible:
+    - usb
+
+Lora:
+  Module: sx1262
+  spidev: ch341
+  USB_VID: 0x1A86
+  USB_PID: 0x5512
+  CS: 0
+  RXen: 1
+  Reset: 2
+  Busy: 4
+  IRQ: 6
+  DIO2_AS_RF_SWITCH: true
+  DIO3_TCXO_VOLTAGE: true
+  SX126X_MAX_POWER: 22
